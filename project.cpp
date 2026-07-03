@@ -56,6 +56,19 @@ int main()
     {
         surcharge = fare * 0.20;
     }
+    else
+    {
+        cout<<"Invalid choice"<<endl;
+        surcharge=0;
+    }
 
     totalFare = fare + surcharge;
+
+
+    cout << "\n----- FARE SUMMARY -----" << endl;
+    cout << "Base Fare: RM " << fare << endl;
+    cout << "Surcharge: RM " << surcharge << endl;
+    cout << "Total Fare: RM " << totalFare << endl;
+
+    return 0;
 }
