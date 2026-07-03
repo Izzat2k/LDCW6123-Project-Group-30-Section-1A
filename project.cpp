@@ -25,27 +25,28 @@ int main()
             cout << "Enter choice (1-3): ";
             cin >> rideChoice;
 
-    // Determine rate per km
+    // Determine the fare rate per kilometre based on ride type
     if (rideChoice == 1)
     {
-        ratePerKM = 1.20;
+        ratePerKM = 1.20; // GrabShare rate
     }
     else if (rideChoice == 2)
     {
-        ratePerKM = 1.50;
+        ratePerKM = 1.50; // GrabCar rate
     }
     else if (rideChoice == 3)
     {
-        ratePerKM = 2.50;
+        ratePerKM = 2.50; // Grab Premium rate
     }
     else
     {
-        cout << "Invalid ride choice!" << endl;
+        cout << "Invalid ride choice!" << endl;  // Exit program if an invalid choice is entered
         return 0;
     }
 
         } while (rideChoice < 1 || rideChoice > 3);
 
+    // Get travel distance from the user
     cout << "Enter distance (km): ";
     cin >> distance;
 
@@ -62,16 +63,16 @@ int main()
     }
     else if (peakHour == 'N'|| peakHour == 'n')
     {
-        surcharge=0;
+        surcharge=0;  // No surcharge for non-peak hours
     }
     else
     {
-        cout << "Invalid choice!" << endl;
+        cout << "Invalid choice!" << endl;  // Exit program if invalid input is entered
         return 0;
     }
-    totalFare = fare + surcharge;
+    totalFare = fare + surcharge;  // Calculate the final fare including surcharge
 
-
+    // Display fare details to the user
     cout << "\n----- FARE SUMMARY -----" << endl;
     cout << "Base Fare: RM " << fare << endl;
     cout << "Surcharge: RM " << surcharge << endl;
