@@ -21,6 +21,12 @@ int main()
     cout << "3. Grab Premium (Luxury 6-seater)" << endl;
     cout << "Enter choice (1-3): ";
 
+    cout << "Enter distance (km): ";
+    cin >> distance;
+
+    cout << "Is it peak hour? (Y/N): ";
+    cin >> peakHour;
+
     // Determine rate per km
     if (rideChoice == 1)
     {
