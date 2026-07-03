@@ -21,5 +21,22 @@ int main()
     cout << "3. Grab Premium (Luxury 6-seater)" << endl;
     cout << "Enter choice (1-3): ";
 
-
+    // Determine rate per km
+    if (rideChoice == 1)
+    {
+        ratePerKM = 1.20;
+    }
+    else if (rideChoice == 2)
+    {
+        ratePerKM = 1.50;
+    }
+    else if (rideChoice == 3)
+    {
+        ratePerKM = 2.50;
+    }
+    else
+    {
+        cout << "Invalid ride choice!" << endl;
+        return 0;
+    }
 }
