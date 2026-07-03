@@ -15,13 +15,15 @@ int main()
 
 
     cout << "*** WELCOME TO THE GRAB FARE CALCULATOR ***" << endl;
-    cout << "Select Your Grab ride type:" << endl;
-    cout << "1. GrabShare (Shared Ride, 1-2 Per Car):" << endl;
-    cout << "2. GrabCar   (Standard Ride):" <<endl;
-    cout << "3. Grab Premium (Luxury 6-seater)" << endl;
-    cout << "Enter choice (1-3): ";
-    cin >> rideChoice;
 
+    do
+        {
+            cout << "Select Your Grab ride type:" << endl;
+            cout << "1. GrabShare (Shared Ride, 1-2 Per Car):" << endl;
+            cout << "2. GrabCar   (Standard Ride):" <<endl;
+            cout << "3. Grab Premium (Luxury 6-seater)" << endl;
+            cout << "Enter choice (1-3): ";
+            cin >> rideChoice;
 
     // Determine rate per km
     if (rideChoice == 1)
@@ -41,6 +43,8 @@ int main()
         cout << "Invalid ride choice!" << endl;
         return 0;
     }
+
+        } while (rideChoice < 1 || rideChoice > 3);
 
     cout << "Enter distance (km): ";
     cin >> distance;
@@ -65,7 +69,6 @@ int main()
         cout << "Invalid choice!" << endl;
         return 0;
     }
-
     totalFare = fare + surcharge;
 
 
