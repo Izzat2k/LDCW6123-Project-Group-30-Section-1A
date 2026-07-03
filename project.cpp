@@ -6,9 +6,9 @@ int main()
 {
     int rideChoice;
     double distance;
-    char Peakhour;
-    double Fare;
-    double RatePerKM;
+    char peakHour;
+    double fare;
+    double ratePerKM;
     double surcharge;
     double subtotal;
     double totalFare;
@@ -20,12 +20,8 @@ int main()
     cout << "2. GrabCar   (Standard Ride):" <<endl;
     cout << "3. Grab Premium (Luxury 6-seater)" << endl;
     cout << "Enter choice (1-3): ";
+    cin >> rideChoice;
 
-    cout << "Enter distance (km): ";
-    cin >> distance;
-
-    cout << "Is it peak hour? (Y/N): ";
-    cin >> peakHour;
 
     // Determine rate per km
     if (rideChoice == 1)
@@ -46,8 +42,14 @@ int main()
         return 0;
     }
 
+    cout << "Enter distance (km): ";
+    cin >> distance;
+
     // Calculate basic fare
     fare = distance * ratePerKM;
+
+    cout << "Is it peak hour? (Y/N): " << endl;
+    cin >> peakHour;
 
     // Peak hour surcharge (20%)
     if (peakHour == 'Y' || peakHour == 'y')
