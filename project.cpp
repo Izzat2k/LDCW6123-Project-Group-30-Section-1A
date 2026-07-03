@@ -56,10 +56,14 @@ int main()
     {
         surcharge = fare * 0.20;
     }
+    else if (peakHour == 'N'|| peakHour == 'n')
+    {
+        surcharge=0;
+    }
     else
     {
-        cout<<"Invalid choice"<<endl;
-        surcharge=0;
+        cout << "Invalid choice!" << endl;
+        return 0;
     }
 
     totalFare = fare + surcharge;
