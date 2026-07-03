@@ -53,7 +53,7 @@ int main()
     // Calculate basic fare
     fare = distance * ratePerKM;
 
-    cout << "Is it peak hour? (Y/N): " << endl;
+    cout << "Is it peak hour? (Y/N): " << endl; //ask user if it is peak hour or not
     cin >> peakHour;
 
     // Peak hour surcharge (20%)
