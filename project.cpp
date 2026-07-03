@@ -12,4 +12,8 @@ int main()
     double surcharge;
     double subtotal;
     double totalFare;
+
+
+    cout << "*** WELCOME TO THE GRAB FARE CALCULATOR ***" << endl;
+
 }
