@@ -45,4 +45,15 @@ int main()
         cout << "Invalid ride choice!" << endl;
         return 0;
     }
+
+    // Calculate basic fare
+    fare = distance * ratePerKM;
+
+    // Peak hour surcharge (20%)
+    if (peakHour == 'Y' || peakHour == 'y')
+    {
+        surcharge = fare * 0.20;
+    }
+
+    totalFare = fare + surcharge;
 }
